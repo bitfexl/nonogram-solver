@@ -3,12 +3,12 @@ package com.github.bitfexl.nonogram;
 public class Main {
     public static void main(String[] args) {
         Nonogram nonogram = new Nonogram(5, 5);
-        nonogram.setRowConstraints(0, new int[] {1, 1});
-        nonogram.setColConstraints(0, new int[] {1});
+        nonogram.setRowConstraints(0, new int[] {1, 1, 1});
+        nonogram.setColConstraints(0, new int[] {1, 8, 67});
         nonogram.setColConstraints(2, new int[] {1});
         nonogram.setCell(0, 0, NonogramBoard.Cell.FILLED);
         nonogram.setCell(2, 0, NonogramBoard.Cell.FILLED);
-        System.out.println(nonogram.solve());
+        System.out.println(new NonogramPrinter().print(nonogram));
     }
 
 //    public static void main(String[] args) {
